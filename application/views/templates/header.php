@@ -13,13 +13,43 @@
     <style>
         .is-invalid {
             border-color: #dc3545 !important;
-            /* Red border */
         }
 
         .error-message,
         .error-messagedua,
         .error-messagetiga {
             color: red;
+        }
+
+        .navbar {
+            background-color: #fff;
+            /* Warna latar belakang navbar */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Efek bayangan */
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            /* Ukuran logo */
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            /* Warna teks item navbar */
+            font-weight: 500;
+            /* Ketebalan teks */
+            transition: color 0.3s ease;
+            /* Transisi warna saat hover */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+            /* Warna teks saat dihover */
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #007bff;
+            /* Warna teks item navbar aktif */
         }
     </style>
 </head>
@@ -44,7 +74,7 @@
                         <a class="nav-link <?php echo $judul == "Klub" ? 'active' : '' ?>" href="<?= base_url('klub') ?>">Klub</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $judul == "Skor Pertandingan" ? 'active' : '' ?>" href="<?= base_url('pertandingan') ?>">Skor</a>
+                        <a class="nav-link <?php echo $judul == "Skor Pertandingan" ? 'active' : '' ?>" href="<?= base_url('pertandingan') ?>">Skor Pertandingan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo $judul == "Klasemen" ? 'active' : '' ?>" href="<?= base_url('klasemen') ?>">Klasemen</a>

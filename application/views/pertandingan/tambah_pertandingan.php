@@ -38,8 +38,10 @@
              </div>
          </div>
 
-         <a type="button" class="btn btn-dark" href="<?= base_url('pertandingan') ?>">Kembali</a>
-         <button type="button" class="btn btn-primary" id="btnTambahData">Tambah Data</button>
-         <button type="submit" class="btn btn-success">Simpan</button>
+         <button type="button" class="btn btn-primary mb-3" id="btnTambahData">+ Multiple Data</button>
+         <div>
+             <a type="button" class="btn btn-dark" href="<?= base_url('pertandingan') ?>">Kembali</a>
+             <button type="submit" class="btn btn-success">Simpan</button>
+         </div>
      </form>
  </div>

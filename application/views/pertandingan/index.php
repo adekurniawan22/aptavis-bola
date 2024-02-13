@@ -12,7 +12,8 @@
                         <th scope="col" style="width: 10%;">No.</th>
                         <th scope="col">Klub Kandang</th>
                         <th scope="col">Klub Tandang</th>
-                        <th scope="col">Skor</th>
+                        <th class="text-center" scope="col">Skor</th>
+                        <th class="text-center" scope="col">Tanggal Pertandingan</th>
                         <th scope="col" style="width: 20%;" class="text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -25,7 +26,8 @@
                             <?php $klub_tandang = $this->db->get_where('t_klub', array('id_klub' => $p->id_tandang))->row(); ?>
                             <td><?= $klub_kandang->nama_klub ?></td>
                             <td><?= $klub_tandang->nama_klub ?></td>
-                            <td><?= $p->skor_kandang ?> - <?= $p->skor_tandang ?></td>
+                            <td class="text-center"><?= $p->skor_kandang ?> - <?= $p->skor_tandang ?></td>
+                            <td class="text-center"><?= date('d/m/Y', strtotime($p->tanggal_pertandingan)) ?></td>
                             <td class="text-center">
                                 <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapus_pertandingan<?= $p->id_pertandingan ?>"><i class="bi bi-trash3-fill me-2"></i>Hapus</button>
                             </td>

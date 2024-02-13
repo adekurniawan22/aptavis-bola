@@ -46,12 +46,14 @@ class Pertandingan extends CI_Controller
 
 	public function proses_tambah_pertandingan()
 	{
+		date_default_timezone_set('Asia/Jakarta');
 		for ($i = 0; $i < count($_POST['id_tandang']); $i++) {
 			$data =  [
 				'id_kandang' => $_POST['id_kandang'][$i],
 				'id_tandang' => $_POST['id_tandang'][$i],
 				'skor_kandang' => $_POST['skor_kandang'][$i],
 				'skor_tandang' => $_POST['skor_tandang'][$i],
+				'tanggal_pertandingan' => date('Y-m-d')
 			];
 
 			$result = $this->db->insert('t_pertandingan', $data);
@@ -113,7 +115,31 @@ class Pertandingan extends CI_Controller
 
 	public function hapus_pertandingan()
 	{
+
 		$id_pertandingan = $this->input->post('id_pertandingan');
+		$pertandingan = $this->Pertandingan_model->get_one_pertandingan($id_pertandingan);
+
+		$this->db->set('goal', 'goal - ' . $pertandingan->skor_kandang, false);
+		$this->db->set('kebobolan', 'kebobolan -' . $pertandingan->skor_tandang, false);
+		$this->db->set('menang', 'menang -' . ($pertandingan->skor_kandang > $pertandingan->skor_tandang ? 1 : 0), false);
+		$this->db->set('seri', 'seri -' . ($pertandingan->skor_kandang == $pertandingan->skor_tandang ? 1 : 0), false);
+		$this->db->set('kalah', 'kalah -' . ($pertandingan->skor_kandang < $pertandingan->skor_tandang ? 1 : 0), false);
+		$this->db->set('point', 'point -' . ($pertandingan->skor_kandang > $pertandingan->skor_tandang ? 3 : ($pertandingan->skor_kandang == $pertandingan->skor_tandang ? 1 : 0)), false);
+
+		$this->db->where('id_klub', $pertandingan->id_kandang);
+		$this->db->update('t_klub');
+
+		// Update data klub tandang
+		$this->db->set('goal', 'goal - ' . $pertandingan->skor_tandang, false);
+		$this->db->set('kebobolan', 'kebobolan - ' . $pertandingan->skor_kandang, false);
+		$this->db->set('menang', 'menang - ' . ($pertandingan->skor_tandang > $pertandingan->skor_kandang ? 1 : 0), false);
+		$this->db->set('seri', 'seri - ' . ($pertandingan->skor_tandang == $pertandingan->skor_kandang ? 1 : 0), false);
+		$this->db->set('kalah', 'kalah - ' . ($pertandingan->skor_tandang < $pertandingan->skor_kandang ? 1 : 0), false);
+		$this->db->set('point', 'point - ' . ($pertandingan->skor_tandang > $pertandingan->skor_kandang ? 3 : ($pertandingan->skor_tandang == $pertandingan->skor_kandang ? 1 : 0)), false);
+
+		$this->db->where('id_klub', $pertandingan->id_tandang);
+		$this->db->update('t_klub');
+
 		$result = $this->Pertandingan_model->delete_pertandingan($id_pertandingan);
 		if ($result) {
 			$this->session->set_flashdata('pesan', 'Data pertandingan <strong>berhasil dihapus</strong>');

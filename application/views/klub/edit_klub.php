@@ -15,7 +15,7 @@
                     <?= form_error('asal_kota_klub', '<p style="font-size: 12px;color: red;" class="my-2">', '</p>'); ?>
                 </div>
                 <a type="button" class="btn btn-dark" href="<?= base_url('klub') ?>">Kembali</a>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-success">Simpan</button>
             </form>
         </div>
     </div>
