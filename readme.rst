@@ -1,65 +1,47 @@
-###################
-Mini Application Klasemen Sepak Bola
-###################
+Mini Projek Kasus Klasemen Sepak Bola
+======================================
 
-Aplikasi ini terdapat 3 menu yaitu klub, skor pertandingan, dan klasemen.
+Proyek ini adalah aplikasi sederhana yang dibangun dengan menggunakan framework CodeIgniter 3 untuk mengelola klasemen sepak bola. Aplikasi ini memiliki tiga fitur utama: Klub, Skor Pertandingan, dan Klasemen.
 
-*******************
-Release Information
-*******************
+Fitur
+-----
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+1. **Klub**: Fitur ini memungkinkan pengguna untuk melihat daftar klub yang terlibat dalam turnamen atau liga tertentu. Pengguna dapat menambahkan klub baru, mengedit klub, atau menghapus klub.
 
-**************************
-Changelog and New Features
-**************************
+2. **Skor Pertandingan**: Fitur ini memungkinkan pengguna untuk mencatat skor pertandingan antara dua klub. Pengguna dapat memasukkan hasil pertandingan, seperti skor akhir pertandingan. Informasi ini akan digunakan untuk menghitung peringkat dalam klasemen.
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+3. **Klasemen**: Fitur ini menampilkan klasemen aktual berdasarkan hasil pertandingan yang dimasukkan oleh pengguna. Pengguna dapat melihat peringkat klub, jumlah poin, serta statistik lainnya seperti jumlah pertandingan dimainkan, menang, seri, dan kalah.
 
-*******************
-Server Requirements
-*******************
+Cara Menggunakan Aplikasi
+--------------------------
 
-PHP version 5.6 or newer is recommended.
+1. **Klub**:
+   - Untuk melihat daftar klub, navigasi ke halaman "Klub".
+   - Untuk menambahkan klub baru, klik tombol "Tambah Klub" dan isi formulir yang diberikan.
+	 - User tidak bisa menambah/mengedit dengan nama klub yg sudah ada sebelumnya.
+   - Untuk mengedit detail klub, klik tombol "Edit" di samping klub yang ingin diedit.
+   - Untuk menghapus klub, klik tombol "Hapus" di samping klub yang ingin dihapus.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+2. **Skor Pertandingan**:
+   - Untuk mencatat skor pertandingan, navigasi ke halaman "Skor Pertandingan".
+   - Isi formulir dengan detail pertandingan, seperti klub yang bertanding, dan skor pertandingan.
+	 - Input skor pertandingan bisa multiple ataupun single input.
+	 - User tidak bisa memasukkan data pertandingan yg sudah terjadi sebelumnya, data pertandingan tim yg sama, dan pengulangan 2x input data yg sama.
+   - Klik tombol "Simpan" untuk menyimpan skor pertandingan.
 
-************
-Installation
-************
+3. **Klasemen**:
+   - Navigasi ke halaman "Klasemen" untuk melihat klasemen aktual.
+   - Klasemen akan otomatis diperbarui setelah Anda mencatat skor pertandingan baru.
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+Instalasi
+----------
 
-*******
-License
-*******
+Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+1. Pastikan Anda memiliki lingkungan pengembangan PHP dan MySQL yang sudah terinstal.
+2. Clone repositori ini ke direktori lokal Anda.
+3. Buatlah database baru dengan nama "bola", dan import file .sql dari folder database.
+4. Jika anda menggunakan XAMPP untuk local server maka anda tinggal menghidupkan XAMPP lalu buka browser dan akses http://localhost/aptavis-bola/.
 
-*********
-Resources
-*********
+Selamat menggunakan aplikasi Mini Projek Kasus Klasemen Sepak Bola! Jika Anda memiliki pertanyaan atau masalah, jangan ragu untuk menghubungi saya melalui WhatsApp di 083171027946`.
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
