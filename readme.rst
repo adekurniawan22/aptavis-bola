@@ -2,11 +2,19 @@ Mini Projek Kasus Klasemen Sepak Bola
 ======================================
 
 Proyek ini adalah aplikasi sederhana yang dibangun menggunakan framework CodeIgniter 3 untuk mengelola klasemen sepak bola. Aplikasi ini memiliki tiga fitur utama: Klub, Skor Pertandingan, dan Klasemen.
-.. image:: assets/home.png
-   :width: 200px
-   :height: 200px
-   :alt: Deskripsi Gambar
+Untuk melihat demo dari aplikasi bisa dilihat di https://rsudiu.xyz/aptavis-bola/
 
+.. image:: ./assets/home.png
+   :width: 700px
+
+.. image:: ./assets/klub.png
+   :width: 700px
+
+.. image:: ./assets/skor_pertandingan.png
+   :width: 700px
+
+.. image:: ./assets/klasemen.png
+   :width: 700px
 
 Fitur
 -----
