@@ -1,71 +1,61 @@
-###################
-What is CodeIgniter
-###################
+Mini Projek Kasus Klasemen Sepak Bola
+======================================
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Proyek ini adalah aplikasi sederhana yang dibangun menggunakan framework CodeIgniter 3 untuk mengelola klasemen sepak bola. Aplikasi ini memiliki tiga fitur utama: Klub, Skor Pertandingan, dan Klasemen.
+.. image:: assets/home.png
+   :width: 200px
+   :height: 200px
+   :alt: Deskripsi Gambar
 
-*******************
-Release Information
-*******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Fitur
+-----
 
-**************************
-Changelog and New Features
-**************************
+1. **Klub**: 
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+   - Fitur ini memungkinkan pengguna untuk melihat daftar klub yang terlibat dalam turnamen atau liga tertentu. Pengguna dapat menambahkan klub baru, mengedit klub, atau menghapus klub.
+   - Untuk melihat daftar klub yang tersedia, navigasi ke halaman "Klub".
+   - Pengguna tidak dapat menambah atau mengedit klub dengan nama yang sudah ada sebelumnya.
 
-*******************
-Server Requirements
-*******************
+2. **Skor Pertandingan**: 
 
-PHP version 5.6 or newer is recommended.
+   - Fitur ini memungkinkan pengguna untuk mencatat skor pertandingan antara dua klub. Pengguna dapat memasukkan hasil pertandingan, seperti skor akhir pertandingan.
+   - Input skor pertandingan bisa berupa multiple atau single input.
+   - Pengguna tidak dapat memasukkan data pertandingan yang sudah terjadi sebelumnya, data pertandingan dari tim yang sama, atau pengulangan 2x input data yang sama.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+3. **Klasemen**: 
 
-************
-Installation
-************
+   - Fitur ini menampilkan klasemen aktual berdasarkan hasil pertandingan yang dimasukkan oleh pengguna. Pengguna dapat melihat peringkat klub, jumlah poin, serta statistik lainnya seperti jumlah pertandingan dimainkan, menang, seri, dan kalah.
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+Cara Menggunakan Aplikasi
+--------------------------
 
-*******
-License
-*******
+1. **Klub**:
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+   - Untuk melihat daftar klub, navigasi ke halaman "Klub".
+   - Untuk menambahkan klub baru, klik tombol "Tambah Klub" dan isi formulir yang diberikan.
+   - Untuk mengedit detail klub, klik tombol "Edit" di samping klub yang ingin diedit.
+   - Untuk menghapus klub, klik tombol "Hapus" di samping klub yang ingin dihapus.
 
-*********
-Resources
-*********
+2. **Skor Pertandingan**:
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+   - Untuk mencatat skor pertandingan, navigasi ke halaman "Skor Pertandingan".
+   - Isi formulir dengan detail pertandingan, seperti klub yang bertanding, dan skor pertandingan.
+   - Klik tombol "Simpan" untuk menyimpan skor pertandingan.
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+3. **Klasemen**:
 
-***************
-Acknowledgement
-***************
+   - Navigasi ke halaman "Klasemen" untuk melihat klasemen aktual.
+   - Klasemen akan otomatis diperbarui setelah Anda mencatat skor pertandingan baru.
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+Instalasi
+----------
+
+Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
+
+1. Pastikan Anda memiliki lingkungan pengembangan PHP dan MySQL yang sudah terinstal.
+2. Clone repositori ini ke direktori lokal Anda.
+3. Buatlah database baru dengan nama "bola", dan import file .sql dari folder database.
+4. Jika Anda menggunakan XAMPP untuk local server, cukup hidupkan XAMPP dan buka browser kemudian akses http://localhost/aptavis-bola/.
+
+Selamat menggunakan aplikasi Mini Projek Kasus Klasemen Sepak Bola! Jika Anda memiliki pertanyaan atau masalah, jangan ragu untuk menghubungi saya melalui WhatsApp di 083171027946.
