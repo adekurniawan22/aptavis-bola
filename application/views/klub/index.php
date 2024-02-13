@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="mb-0">Daftar Data Klub</h2>
-                <a href="<?= base_url('klub/tambah-klub') ?>" class="btn btn-primary text-end">+Tambah Data</a>
+                <a href="<?= base_url('klub/tambah-klub') ?>" class="btn btn-primary text-end">+Tambah Klub</a>
             </div>
 
             <table id="example" class="table">
